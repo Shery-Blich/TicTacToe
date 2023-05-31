@@ -4,36 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e144206a-4dcb-44c0-b41d-3ad0cbc4454e" name="Changes" comment="finished tic tac toe">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/Components/Board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/Components/Game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/Components/SquareButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/setupTests.js" afterDir="false" />
+    <list default="true" id="e144206a-4dcb-44c0-b41d-3ad0cbc4454e" name="Changes" comment="deleting usless files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe/src/Components/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe/src/Components/Game.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2QTUKBLLdJDOxVChlbzy9US6BVU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">

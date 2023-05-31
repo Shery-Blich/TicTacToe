@@ -47,7 +47,7 @@ export default function Game() {
     return (
         <div className="game">
             <div className="game-board">
-                <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} finishedMoves={moves.length === 10} />
+                <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} finishedMoves={currentMove === 9} />
             </div>
             <div className="game-info">
                 <button onClick={handleToggle} className="button">Sorting by:{isDesc ? "Desc" : "ASC"}</button>
