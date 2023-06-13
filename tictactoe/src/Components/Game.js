@@ -2,16 +2,24 @@ import {Board} from "./Board";
 import {useState} from "react";
 import {lastClickedElement} from "./Board";
 
+// fix handlePlay remove usless slice?
+// add const for default state of history
+// add spaces, AFTER FUNNCTION, BEFORE IFS
+
 export default function Game() {
     const [history, setHistory] = useState([Array(9).fill(null)]);
-    const [isDesc, setIsDesc] = useState(true);
+    const [shouldSortDescending, setShouldSortDescending] = useState(true);
     const [currentMove, setCurrentMove] = useState(0);
+    // "1" == 1 => TRUE
+    // "1" === 1 => FALSE
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
     const [clickPoints, setClickPoint] = useState([]);
+
     function handlePlay(nextSquares) {
         const nextClickPoint = [...clickPoints.slice(0,currentMove + 1), lastClickedElement]
         const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+
         setHistory(nextHistory);
         setClickPoint(nextClickPoint);
         setCurrentMove(nextHistory.length - 1);
@@ -36,11 +44,15 @@ export default function Game() {
             </li>
         );
     });
+
+    // FIX NAMING FOR ISDESC
      function handleToggle() {
-            setIsDesc(!isDesc);
+         // Always do this for sets dependent on previous values
+         // best practice for this situation :)
+            setShouldSortDescending(prevValue => !prevValue);
      }
 
-    if (!isDesc) {
+    if (!shouldSortDescending) {
         moves = moves.slice().reverse();
     }
 
@@ -50,7 +62,7 @@ export default function Game() {
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} finishedMoves={currentMove === 9} />
             </div>
             <div className="game-info">
-                <button onClick={handleToggle} className="button">Sorting by:{isDesc ? "Desc" : "ASC"}</button>
+                <button onClick={handleToggle} className="button">Sorting by:{shouldSortDescending ? "DESC" : "ASC"}</button>
                 <ol>{moves}</ol>
             </div>
         </div>

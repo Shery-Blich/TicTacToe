@@ -1,37 +1,44 @@
-import {Square} from "./SquareButton";
+import {Square} from "./Square";
 
+
+// replace lastClickedElement, you can pass setState for clickpoint in game
 export let lastClickedElement = {row: -1, col: -1};
 
+// use consts and default export instead of function?
+// most used case is using default export for componenets so it;s neccasery
 export function Board({ xIsNext, squares, onPlay, finishedMoves}) {
-    function handleClick(i) {
-        lastClickedElement = {row: Math.floor(i/3),col: (i%3)};
-
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
-        const nextSquares = squares.slice();
-        if (xIsNext) {
-            nextSquares[i] = "X";
-        } else {
-            nextSquares[i] = "O";
-        }
-        onPlay(nextSquares);
-    }
-
     const winnerData = calculateWinner(squares);
     const winner = winnerData?.winner;
     const winningLine = winnerData?.winningLine;
 
+    function handleClick(squareIndex) {
+        lastClickedElement = {row: Math.floor(squareIndex / 3), col: (squareIndex % 3)};
+
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+            nextSquares[squareIndex] = "X";
+        } else {
+            nextSquares[squareIndex] = "O";
+        }
+        onPlay(nextSquares);
+    }
+
+
+    // best practice for logic inside react components?
+    // should be only events, funcs and effects
+    // can tie to use effect?
     let status;
     if (winner) {
         status = "Winner: " + winner;
     } else  if (finishedMoves) {
         status = "Tie";
-    }
-        else {
+    } else {
         status = "Next player: " + (xIsNext ? "X" : "O");
     }
 
+    // better way to use for in javascript?
+    // lodash
+    // put 3 in const
     const board = [];
     for (let i = 0; i < 3; i++) {
         const squaresInRow = [];
@@ -43,6 +50,7 @@ export function Board({ xIsNext, squares, onPlay, finishedMoves}) {
                     value={squares[squareIndex]}
                     onSquareClick={() => handleClick(squareIndex)}
                     highlight={winner && winningLine.includes(squareIndex)}
+                    isGameOver={winner || finishedMoves}
                 />
             );
         }
